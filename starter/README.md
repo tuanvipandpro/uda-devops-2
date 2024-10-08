@@ -4,13 +4,13 @@
 cd starter
 
 ## Spin up instructions
-aws cloudformation create-stack --stack-name network-1  --template-body file://network.yml  --parameters file://network-parameters.json --region=us-east-1
-
-aws cloudformation create-stack --stack-name server-1  --template-body file://servers.yml --parameters file://servers-parameters.json --region=us-east-1
+sh spin-up.sh
 
 ## Tear down instructions
-aws cloudformation create-stack --stack-name network-1
-aws cloudformation create-stack --stack-name server-1
+sh tear-down.sh
   
 ## Other considerations
 TBD
+
+
+Serve URL: [udagra-WebAp-dIYTMun7rI27-1789486722.us-east-1.elb.amazonaws.com](http://udagra-webap-diytmun7ri27-1789486722.us-east-1.elb.amazonaws.com/)

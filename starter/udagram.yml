@@ -11,7 +11,7 @@ Resources:
       GroupDescription: Allowed HTTP traffic from ALB
       VpcId:
         Fn::ImportValue:
-          !Sub "${EnvironmentName}-VPCID"
+          Fn::Sub: "${EnvironmentName}-VPCID"
       SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 80
@@ -56,7 +56,7 @@ Resources:
           systemctl start httpd
           systemctl enable httpd
           echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
-      ImageId: ami-0efa651876de2a5ce
+      ImageId: ami-0fff1b9a61dec8a5f
       SecurityGroups:
       - Ref: WebServerSecurityGroup
       InstanceType: t2.micro
